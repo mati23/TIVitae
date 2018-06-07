@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class TableSkills extends Migration
+class CreateLinguagem extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,13 @@ class TableSkills extends Migration
      */
     public function up()
     {
-      Schema::create('tb_skills', function (Blueprint $table){
-        //chave estrangeira
 
+        Schema::create('linguagem',function(Blueprint $table){
+          $table->increments('linguagem_id');
+          $table->string('linguagem_nome',100);
+          $table->timestamps();
 
-        $table->boolean('skills_programmer');
-        $table->boolean('skills_dbadmin');
-        $table->boolean('skills_system_analyst');
-        $table->boolean('skills_webdesigner');
-        
-      });
-        //
+        });
     }
 
     /**
@@ -33,6 +29,6 @@ class TableSkills extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('linguagem');
     }
 }

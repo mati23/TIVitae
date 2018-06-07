@@ -84,7 +84,7 @@
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Busque um profissional</a>
-                    <a href="http://localhost:8000/cadastro">Cadastrar-se</a>
+                    <a href="{{}}">Cadastrar-se</a>
 
                 </div>
             </div>
