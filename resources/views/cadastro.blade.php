@@ -32,12 +32,21 @@
             <label for="descricao">Descrição:</label><br>
             <textarea id="descricao" class="materialize-textarea"></textarea>
           </div>
+          <p>
 
-          @foreach($linguagens as $lang)
-            <tr>
-              <td>{{$lang->linguagem_nome}}</td>
-            </tr>
-          @endforeach
+
+          <div class="input-field col s6 offset-s2">
+            <!--Este trecho pega todas as linguagens do banco de dados e joga nas checkboxes-->
+            @foreach($linguagens as $lang)
+              <p>
+               <label>
+                 <input type="checkbox" class="filled-in"/>
+                 <span>{{$lang->linguagem_nome}}</span>
+               </label>
+              </p>
+
+            @endforeach
+          </div>
         </div>
 
       </form>
