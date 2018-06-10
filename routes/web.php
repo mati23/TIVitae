@@ -16,8 +16,6 @@ Route::get('/', function () {
 });
 
 
-Route::get('cadastro', 'UserController@index');
+Route::get('cadastro', 'CadastroController@index');
 
-Route::get('users',function(){
-  return view('users');
-});
+Route::get('users','UserController@index');

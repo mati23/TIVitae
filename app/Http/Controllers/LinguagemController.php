@@ -8,7 +8,8 @@ class LinguagemController extends Controller
 {
   public function index()
    {
-  
+
    }
 
+  
 }

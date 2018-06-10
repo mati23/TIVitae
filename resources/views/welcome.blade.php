@@ -83,8 +83,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Busque um profissional</a>
-                    <a href="{{}}">Cadastrar-se</a>
+                    <a href="{{url('/listagem')}}">Lista de Usuários</a>
+                    <a href="{{url('/cadastro')}}">Cadastrar-se</a>
 
                 </div>
             </div>

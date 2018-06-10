@@ -13,7 +13,7 @@ class CreateProgramador extends Migration
      */
     public function up()
     {
-
+      //Migrate para criacao da tabela de programadores
         Schema::create('programador',function(Blueprint $table){
           $table->increments('programador_id');
           $table->string('programador_nome',60);

@@ -13,7 +13,7 @@ class CreateLinguagem extends Migration
      */
     public function up()
     {
-
+      //Migrate para criacao da tabela de linguagens
         Schema::create('linguagem',function(Blueprint $table){
           $table->increments('linguagem_id');
           $table->string('linguagem_nome',100);
