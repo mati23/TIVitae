@@ -15,7 +15,7 @@
   </head>
 
   <nav class="teal darken-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">
+    <div class="nav-wrapper container"><a id="logo-container" href="{{url('/')}}" class="brand-logo">
       <img class="responsive" src="{{asset('images/tivitaeLogo.png')}}" style="height:45px; margin-top:10px; " alt="">
     </a>
       <ul class="right hide-on-med-and-down">
