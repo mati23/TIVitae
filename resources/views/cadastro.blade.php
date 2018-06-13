@@ -42,7 +42,7 @@
             @foreach($linguagens as $lang)
               <p>
                <label>
-                 <input type="checkbox" class="filled-in" name="check_linguagem"/>
+                 <input type="checkbox" class="filled-in" name="check_linguagem[]" value="{{$lang->linguagem_id}}"/>
                  <span>{{$lang->linguagem_nome}}</span>
                </label>
               </p>
