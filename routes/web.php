@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::get('users','UserController@index');
 
 Route::resource('cadastro', 'CadastroController');
+
+Route::get('listagem','ListagemController@index');
