@@ -22,7 +22,7 @@
 
               <tr>
                 <td>{{$prog->programador_id}}</td>
-                <td><a href="#">{{$prog->programador_nome}}</a> </td>
+                <td><a href="{{url('users/'.$prog->programador_id)}}">{{$prog->programador_nome}}</a> </td>
 
               </tr>
     @endforeach

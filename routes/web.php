@@ -18,7 +18,9 @@ Route::get('/', function () {
 
 //Route::get('cadastro', 'CadastroController@index');
 
-Route::get('users','UserController@index');
+Route::get('/users/{id}', 'UserController@index');
+
+
 
 Route::resource('cadastro', 'CadastroController');
 
