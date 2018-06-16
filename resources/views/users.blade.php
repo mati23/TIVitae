@@ -54,24 +54,25 @@
               </div>
 
         <div class="items-cv">
-          <i class="fa fa-phone fa-2x"></i> <span style="font-size:20px; font-weight: 300;">{{$programador_telefone}}</span>
+          <i class="fa fa-phone fa-2x" style="margin:10px 20px;"></i> <span style="font-size:20px; font-weight: 300;">({{$telefone_ddd}}){{$telefone_restante}}</span>
         </div>
         <div class="items-cv">
           <i class="fa fa-envelope fa-2x"></i> <span style="font-size:20px; font-weight: 300;" name='email'>{{$programador_email}}</span>
         </div>
         <div class="items-cv">
-          <i class="fa fa-home fa-2x"></i> <span style="font-size:20px; font-weight: 300;">Jose Julio, 300</span>
+          <i class="fa fa-home fa-2x"></i> <span style="font-size:20px; font-weight: 300;">{{$programador_email}}</span>
         </div>
-        <div class="items-cv">
-          <i class="fa fa-home fa-2x"></i> <span style="font-size:20px; font-weight: 300;">Jose Julio, 300</span>
-        </div>
+
 
       </div>
 
 
     </div>
     <div class="col s9 card-panel grey lighten-8" style="float-right;" id="right-div" >
-      @include('layouts.bodyRight')
+      <div class="center">
+        <h3>Sobre Mim</h3>
+      </div>
+      {{$programador_descricao}}
     </div>
   </div>
   @include('layouts.footer')
