@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset('js/Chart.js')}}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <script type="text/javascript">
@@ -73,12 +74,65 @@
         <h3>Sobre Mim</h3>
       </div>
       {{$programador_descricao}}
+
+
+
+
+
+      @foreach($proglin_id as $prog)
+      <div class="container" style="height:200px;width:200px;">
+          <canvas id="{{$prog}}" width="100" height="100"></canvas>
+      </div>
+      <script >
+      var ctx = document.getElementById("{{$prog}}").getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+              labels: ["Red", "Blue"],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [12, 19],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)'
+
+                  ],
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)'
+
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
+          }
+      });
+      </script>
+      @endforeach
+
+
+
+
+
+
+
     </div>
   </div>
-  @include('layouts.footer')
+    @include('layouts.footer')
 
 
 
-    <script type="text/javascript" src="{{asset('js/materialize.js')}}"/>
+    <script type="text/javascript" src="{{asset('js/materialize.js')}}"></script>
+
+
+
   </body>
 </html>
