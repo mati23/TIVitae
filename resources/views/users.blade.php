@@ -15,8 +15,9 @@
 
     <script type="text/javascript">
       jQuery(document).ready(function($){
-        var container_height = $('#side-div').height();
-        $("#right-div, #left-div").height(container_height);
+        var container_height =$("#side-div").height()+10;
+        $("#right-div").height(container_height);
+        $("#left-div").height(container_height);
       });
     </script>
 
@@ -29,7 +30,7 @@
           <img class="responsive" src="{{asset('images/tivitaeLogo.png')}}" style="height:45px; margin-top:10px; " alt="">
         </a>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Navbar Link</a></li>
+
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
@@ -42,7 +43,7 @@
     <!-- Toda a pagina deve ser construida dentro dessas divs-->
   <!-- DIV ESQUERDA-->
   <div class="row" id="side-div">
-    <div class="col s3 card-panel teal lighten-2" style="float-left;" id="left-div "  >
+    <div class="col s3 card-panel teal lighten-2" style="float-left;" id="left-div"  >
 
       <div >
         <div class="center-align">
