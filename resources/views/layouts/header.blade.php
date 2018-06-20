@@ -19,9 +19,7 @@
       <img class="responsive" src="{{asset('images/tivitaeLogo.png')}}" style="height:45px; margin-top:10px; " alt="">
     </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">
-          <i class="medium material-icons">search</i>
-        </a></li>
+
       </ul>
 
       <ul id="nav-mobile" class="sidenav">

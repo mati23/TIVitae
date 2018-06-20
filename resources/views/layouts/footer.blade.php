@@ -1,30 +1,29 @@
+<!-- Essa parte é referente ao rodapé do site e que é exibido em todas as páginas-->
 <footer class="page-footer  teal darken-1">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">Company Bio</h5>
-        <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+        <a id="logo-container" href="{{url('/')}}" class="brand-logo">
+          <img class="responsive" src="{{asset('images/tivitaeLogo.png')}}" style="height:45px; margin-top:10px; " alt="">
+        </a>
+        <p class="grey-text text-lighten-4">
+          Trabalho final de Tecnologias Web que traz como proposta uma plataforma de currículos
+          com um diferencial estético, onde textos longos sobre a qualificação do candidato
+          podem ser traduzidos em gráficos com aparência simples e informativa.
+        </p>
 
 
       </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Settings</h5>
+      <div class="col l4 s12">
+        <h5 class="white-text">Conteúdo</h5>
         <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
+          <!-- Links que são rotas do laravel-->
+          <li><a class="white-text" href="{{url('/')}}">Início</a></li>
+          <li><a class="white-text" href="{{url('/cadastro')}}">Cadastre-se</a></li>
+          <li><a class="white-text" href="{{url('/listagem')}}">Lista de Profissionais</a></li>
         </ul>
       </div>
-      <div class="col l3 s12">
-        <h5 class="white-text">Connect</h5>
-        <ul>
-          <li><a class="white-text" href="#!">Link 1</a></li>
-          <li><a class="white-text" href="#!">Link 2</a></li>
-          <li><a class="white-text" href="#!">Link 3</a></li>
-          <li><a class="white-text" href="#!">Link 4</a></li>
-        </ul>
-      </div>
+
     </div>
   </div>
   <div class="footer-copyright">

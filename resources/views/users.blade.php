@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="{{asset('js/jquery.js')}}"></script>
     <script type="text/javascript" src="{{asset('js/Chart.js')}}"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
@@ -40,6 +40,7 @@
     </nav>
 
     <!-- Toda a pagina deve ser construida dentro dessas divs-->
+  <!-- DIV ESQUERDA-->
   <div class="row" id="side-div">
     <div class="col s3 card-panel teal lighten-2" style="float-left;" id="left-div "  >
 
@@ -49,19 +50,19 @@
         </div>
         <br><br>
         <div class="card-panel teal center ">
-                <span class="white-text">
+                <span class="white-text ">
                   <h5>{{$programador_nome}}</h5>
                 </span>
               </div>
 
         <div class="items-cv">
-          <i class="fa fa-phone fa-2x" style="margin:10px 20px;"></i> <span style="font-size:20px; font-weight: 300;">({{$telefone_ddd}}){{$telefone_restante}}</span>
+          <i class="fa fa-phone fa-2x" style="margin:10px 20px;"></i> <span style="font-size:15px; font-weight: 300;">({{$telefone_ddd}}){{$telefone_restante}}</span>
         </div>
         <div class="items-cv">
-          <i class="fa fa-envelope fa-2x"></i> <span style="font-size:20px; font-weight: 300;" name='email'>{{$programador_email}}</span>
+          <i class="fa fa-envelope fa-2x" style="margin:10px 20px;"></i> <span style="font-size:15px; font-weight: 300;" name='email'>{{$programador_email}}</span>
         </div>
         <div class="items-cv">
-          <i class="fa fa-home fa-2x"></i> <span style="font-size:20px; font-weight: 300;">{{$programador_email}}</span>
+          <i class="fa fa-home fa-2x" style="margin:10px 20px;"></i> <span style="font-size:15px; font-weight: 300;">{{$programador_email}}</span>
         </div>
 
 
@@ -70,22 +71,22 @@
 
     </div>
     <!--DIV DIREITA-->
-    <div class="col s9 card-panel grey lighten-8" style="float-right;" id="right-div" >
+    <div class="col s9 card-panel grey lighten-1 center" style="float-right;" id="right-div" >
       <div class="center">
-        <h3>Sobre Mim</h3>
+        <h3 style="color:white;">Sobre Mim</h3>
       </div>
       {{$programador_descricao}}
-
-
+      <br> <br>
+      <script type="text/javascript" src="{{asset('js/divGenerator.js')}}">
+      </script>
 
 
 
       @foreach($proglin_id as $prog)
-      <div class="container" style="height:200px;width:200px;">
+
+      <div class="col s12 m4 l4">
           <canvas id="{{$prog}}" width="100" height="100"></canvas>
       </div>
-
-
 
       <script >
       var cores = [
@@ -191,8 +192,22 @@
 
         var ctx = document.getElementById("{{$prog}}").getContext("2d");
         var myChart = new Chart(ctx, config);
+        genDivs('{{$prog}}');
       </script>
+
+      <?php ++$contador ?>
+
+
+
+      @if ($contador >2)
+
+      <?php $contador = 0; ?>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+      @endif
+
       @endforeach
+
 
 
 

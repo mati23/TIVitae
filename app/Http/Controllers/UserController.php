@@ -24,7 +24,7 @@ class UserController extends Controller
      $programador_linguagens = DB::table('programador_linguagem')->where('programador_id',$id)->get();
 
      $vetor_de_linames = $this->retornaLinguagensId($programador_linguagens);
-
+     $contador = 0;
        return view('users')->with([
          'programador_nome'=>$programador_nome,
          'telefone_ddd'=>$telefone_ddd,
@@ -32,10 +32,12 @@ class UserController extends Controller
          'programador_email'=>$programador_email,
          'programador_endereco'=>$programador_endereco,
          'programador_descricao'=>$programador_descricao,
-         'proglin_id'=>$vetor_de_linames
+         'proglin_id'=>$vetor_de_linames,
+         'contador'=>$contador
        ]);
    }
-
+//funcao  que retorna os nomes das linguagens para colocar nos gráficos
+//de acordo com o seu id
    public function retornaLinguagensId($programador_linguagens){
      $vetor_de_proglin = [];
      $vetor_de_linames = [];
