@@ -1,5 +1,7 @@
 @include('layouts.header')
-
+<!--
+Tela de Cadastro precisará de uma revisão geral
+-->
 <div class="center" >
   <h2 style="font-weight:300;">Cadastro</h2>
 </div>

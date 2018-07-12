@@ -1,4 +1,7 @@
 <!doctype html>
+<!--
+Tela de Inicio deverá ser excluida e refeita
+-->
 <html lang="{{ app()->getLocale() }}">
     <head>
         <meta charset="utf-8">
